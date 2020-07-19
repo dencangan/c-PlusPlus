@@ -1,4 +1,10 @@
-/* C++ Basics - This is practice program for learning C++*/
+/* C++ Basics
+
+cout - print stuff
+cin - inputs
+data types - int, double, char, float
+
+*/
 
 // Must include iostream to use cout
 #include <iostream>
