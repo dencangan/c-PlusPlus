@@ -1,4 +1,6 @@
-# C++
+# healthAnalyser
+
+Practice repository to build health-related scripts using C++.
 
 Setting up C/C++ for Windows
 1. Download the C/C++ compiler from [here](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download). Note there are different types of compilers, the one specified in the link is minGW-w64.
