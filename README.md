@@ -2,7 +2,14 @@
 
 Practice repository to build health-related scripts using C++.
 
-Setting up C/C++ for Windows
+Things to develop:
+- BMI calculator (WIP)
+- Calorie counter
+- Ideal body weight calculator
+- Body fat calculator
+- Food energy converter
+
+### Setting up C/C++ for Windows
 1. Download the C/C++ compiler from [here](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download). Note there are different types of compilers, the one specified in the link is minGW-w64.
 2. Install the compiler to a location, ensure that you select the right settings when running the installation. i686 for 32 bit and x86_64 for 64 bit.
 3. Make sure you configure your system variable path to include the path of installation, specifically pointing to the 'bin' folder. For example, C:/mingw-w64/bin.
