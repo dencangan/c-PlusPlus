@@ -1,4 +1,4 @@
-/* C++ Basics
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              /* C++ Basics
 
 cout - print stuff
 cin - inputs
@@ -42,9 +42,9 @@ void display(int var1, double var2) {
 
 // Every C++ program must have a main function, this is the function that the program will execute
 int main() {
+
     std::cout << "Hello World! This is a quick tutorial on C++.";
     cout << endl << "Hellow world, we are printing this statement using namespace std! We also use 'endl' as linespace!";
-
     int num1 = 70;
     double num2 = 256.783;
     char ch = 'D';
@@ -112,10 +112,9 @@ int main() {
     long int c = 2345342;
     long double d = 233434.56343;
 
-
     // CALLING FUNCTIONS
     greet();
-    int num1 = 4;
+    int num_one = 4;
     printNum(num1);
 
     cout << "absolute function with float" << absolute(-5) << endl;
@@ -168,24 +167,24 @@ int main() {
     */
 
     char oper;
-    float num1, num2;
+    float num_1, num_2;
     cout << "Enter an operator (+, -, *, /): ";
     cin >> oper;
     cout << "Enter two numbers: " << endl;
-    cin >> num1 >> num2;
+    cin >> num_1 >> num2;
 
     switch (oper) {
         case '+':
-            cout << num1 << " + " << num2 << " = " << num1 + num2;
+            cout << num_1 << " + " << num_2 << " = " << num_1 + num_2;
             break;
         case '-':
-            cout << num1 << " - " << num2 << " = " << num1 - num2;
+            cout << num_1 << " - " << num_2 << " = " << num_1 - num_2;
             break;
         case '*':
-            cout << num1 << " * " << num2 << " = " << num1 * num2;
+            cout << num_1 << " * " << num_2 << " = " << num_1 * num_2;
             break;
         case '/':
-            cout << num1 << " / " << num2 << " = " << num1 / num2;
+            cout << num_1 << " / " << num_2 << " = " << num_1 / num_2;
             break;
         default:
             // operator is doesn't match any case constant (+, -, *, /)
@@ -193,6 +192,19 @@ int main() {
             break;
     }
     
+    /*
+    Structure in C++
+
+    When a structure is created, no memory is allocated.
+    */
+    struct Person {
+        char name[50];
+        int age;
+        float salary;
+    };
+
+    // Assigning structure to variable
+    Person john;
     return 0;
 
 }
