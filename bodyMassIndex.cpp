@@ -5,31 +5,7 @@
 #include <cmath>
 using namespace std;
 
-float weightConverter(int weight, bool isKg) {
-    float kgToPound = 2.20462;
-    if (isKg) {
-        return weight;
-    }
-    else {
-         return weight * kgToPound; 
-    }
-};
-
-float heightConverter(int height, bool isCm) {
-    float inchToCm = 2.20462;
-    if (isCm) {
-        return height;
-    }
-    else {
-         return height * inchToCm; 
-    }
-}
-
-float bmiCalculator(float weight, float height) {
-    return weight / pow((height / 100), 2);
-};
-
-string inputChoices(bool isWeight) {
+string selectMetric(bool isWeight) {
     
     string metric;
 
@@ -47,7 +23,7 @@ string inputChoices(bool isWeight) {
         }
         else {
             cout << "Invalid weight metric defined. ";
-            return inputChoices(true);
+            return selectMetric(true);
         }
     }
 
@@ -65,17 +41,40 @@ string inputChoices(bool isWeight) {
         }
         else {
             cout << "Invalid height metric defined. Please enter 'cm' or 'inch'. ";
-            return inputChoices(false);
+            return selectMetric(false);
 
         }
     }
 }
 
+float bmiCalculator(float weight, float height) {
+
+    string weightMetric = selectMetric(true);
+    string heightMetric = selectMetric(false);
+    float weightConverted = weight;
+    float heightConverted = height;
+
+    if (weightMetric == "lbs") {
+        weightConverted = weight / 2.20462;
+    };
+
+    if (heightMetric == "inch") {
+        heightConverted = height * 2.54;
+        cout << endl << heightConverted;
+    };
+
+    float bmiResult = weightConverted / pow((heightConverted / 100), 2);
+    cout << endl << "Your BMI is: " << bmiResult;
+
+    return bmiResult; 
+
+
+};
+
+
 int main() {
 
-    string weight = inputChoices(true);
-    string height = inputChoices(false);
-    cout << endl << weight << endl << height;
+    float bmi = bmiCalculator(154.324, 69.685);
 
     // cout << "This is a Body Mass Index (BMI) calculator" << endl;
     // cout << "Enter your weight (kg):";
@@ -86,4 +85,4 @@ int main() {
     // float bmi = bmiCalculator(weightInput, heightInput);
     // cout << "Your BMI is: " << bmi;
 
-}
+};
