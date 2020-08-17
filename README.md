@@ -1,10 +1,11 @@
 # healthAnalyser
 
-Practice repository to build health-related scripts using C++.
+Repository containing health-related scripts developed using C++.
 
-Things to develop:
-- BMI calculator (WIP)
-- Calorie counter
+BMI calculator
+- Accepts weight and height inputs with specified metrics (kg/lbs or cm/inch).
+
+Calorie counter
 - Ideal body weight calculator
 - Body fat calculator
 - Food energy converter
