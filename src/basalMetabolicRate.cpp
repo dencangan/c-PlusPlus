@@ -2,10 +2,15 @@
 #include <iostream>
 using namespace std;
 
-#include "bodyMassIndex.h"
+#include "my_class.h"
 
-// Mifflin-St Jeor and Revised Harris-Benedict Equation
-float calculateBMR(bool isMale, float weight, float height, int age) {
+float calculateBasalMetabolicRate(bool isMale, float weight, float height, int age) {
+    /*
+    Basal Metabolic Rate (BMR) is the number of calories required to keep your body functioning at rest. BMR is also known as your body's metabolism.
+    The value obtained from these equations is the estimated number of calories a person can consume in a day to maintain their body weight, assuming they remain at rest.
+
+    Mifflin-St Jeor and Revised Harris-Benedict Equation
+    */
     float mifflinStJeorBMR;
     float harrisBenedictBMR;
 
@@ -29,5 +34,5 @@ float calculateBMR(bool isMale, float weight, float height, int age) {
 
 
 int main() {
-    calculateBMR(false, 70.5, 177, 25);
+    calculateBasalMetabolicRate(false, 70.5, 177, 25);
 }
