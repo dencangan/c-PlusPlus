@@ -8,6 +8,7 @@ using namespace std;
 using namespace C;
 
 string selectMetric(bool isWeight) {
+    /*Helper function to select/restrict user to using 'kg' or 'lbs', 'cm' or 'inch'.*/
     
     string metric;
 
@@ -28,7 +29,6 @@ string selectMetric(bool isWeight) {
             return selectMetric(true);
         }
     }
-
     else {
         cout << "Please choose height metric, enter 'cm' or 'inch': ";
         cin >> metric;
@@ -44,13 +44,12 @@ string selectMetric(bool isWeight) {
         else {
             cout << "Invalid height metric defined. Please enter 'cm' or 'inch'. ";
             return selectMetric(false);
-
         }
     }
 }
 
 bool selectGender() {
-    
+    /*Helper function to select/restrict user to specify male 'm' or female 'f'.*/
     string gender;
     bool isMale;
     cout << "Are you a male or a female? (m/f)" << endl;
@@ -71,6 +70,7 @@ bool selectGender() {
 }
 
 float bmiCalculator(float w, float h) {
+    /*Calculates body mass index and provides short commentary on health status depending on the level of BMI.*/
 
     float bmiResult = w / pow((h / 100), 2);
     cout << endl << "Your Body Mass Index (BMI) is: " << bmiResult << endl;
@@ -136,9 +136,9 @@ int main() {
 
     string weightMetric = selectMetric(true);
     string heightMetric = selectMetric(false);
-    cout << "Please enter your weight (kg/lbs): " << endl;
+    cout << "Please enter your weight: " << endl;
     cin >> p.weight;
-    cout << "Please enter your height (cm/inch): " << endl;
+    cout << "Please enter your height: " << endl;
     cin >> p.height;
 
     if (weightMetric == "lbs") {

@@ -14,6 +14,9 @@ Calorie counter
 - Body fat calculator
 - Food energy converter
 
+### How to compile
+In command line, enter "g++ -o <name-of-executable> script.cpp". Run it with "./<name-of-executable>".
+
 ### Extra Notes: Setting up C/C++ for Windows
 1. Download the C/C++ compiler from [here](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download). Note there are different types of compilers, the one specified in the link is minGW-w64.
 2. Install the compiler to a location, ensure that you select the right settings when running the installation. i686 for 32 bit and x86_64 for 64 bit.
